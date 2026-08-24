@@ -1,0 +1,16 @@
+# Dependencies and local build caches
+node_modules/
+.build-tools/
+src-tauri/target/
+src-tauri/target-ui-preview/
+
+# Local agent/task metadata and scratch tickets
+.agents/
+.codex/
+.scratch/
+
+# Local logs and editor state
+*.log
+.DS_Store
+Thumbs.db
+

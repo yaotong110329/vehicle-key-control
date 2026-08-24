@@ -1,0 +1,16 @@
+[package]
+name = "vehicle-key-control"
+version = "1.0.0"
+description = "Windows single-machine vehicle key control system"
+authors = ["Vehicle Key Control"]
+edition = "2021"
+
+[lib]
+name = "vehicle_key_control_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f4f0">
+    <title>車輛鑰匙控管</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M14.5 6.5a5 5 0 1 1-1.42 3.49L22 1.07 22.93 2l-1.5 1.5 1.07 1.07-2 2-1.07-1.07-1.5 1.5L19 8.07l-2 2-1.08-1.08-1.42 1.42A5 5 0 0 1 14.5 6.5ZM7 9a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"/></svg>
+        </div>
+        <div>
+          <p class="brand-title">車輛鑰匙控管</p>
+          <p class="brand-subtitle">值班即時狀態</p>
+        </div>
+      </div>
+
+      <div id="header-summary" class="header-summary" aria-label="鑰匙狀態摘要"></div>
+
+      <div class="header-actions">
+        <div class="live-clock" aria-label="現在日期與時間">
+          <span id="current-date"></span>
+          <strong id="current-time"></strong>
+        </div>
+        <nav class="main-nav" aria-label="主要導覽">
+          <button class="nav-button" type="button" data-view="dashboard">
+            <span class="nav-button__icon" aria-hidden="true">▦</span>
+            總覽
+          </button>
+          <button class="nav-button" type="button" data-view="history">
+            <span class="nav-button__icon" aria-hidden="true">◷</span>
+            紀錄
+          </button>
+          <button class="nav-button" type="button" data-view="settings">
+            <span class="nav-button__icon" aria-hidden="true">⚙</span>
+            設定
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="app" tabindex="-1"></main>
+
+    <dialog id="app-dialog" class="app-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-subtitle">
+      <div class="dialog-shell">
+        <header class="dialog-header">
+          <div>
+            <h2 id="dialog-title"></h2>
+            <p id="dialog-subtitle"></p>
+          </div>
+        </header>
+        <div id="dialog-body" class="dialog-body"></div>
+        <p id="dialog-error" class="dialog-error" role="alert" hidden></p>
+        <footer class="dialog-footer">
+          <div class="dialog-footer__left">
+            <button id="dialog-cancel" class="button button--secondary" type="button">取消</button>
+            <button id="dialog-tertiary" class="button button--ghost" type="button" hidden>清除</button>
+          </div>
+          <button id="dialog-confirm" class="button button--primary" type="button">儲存</button>
+        </footer>
+      </div>
+    </dialog>
+
+    <div id="toast-region" class="toast-region" aria-live="polite"></div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

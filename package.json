@@ -1,0 +1,16 @@
+{
+  "name": "vehicle-key-control",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:bulk": "node tests/bulk-import.test.mjs",
+    "test:settings": "node tests/app-settings.test.mjs",
+    "test:backup": "node tests/backup.test.mjs",
+    "test:unit": "node tests/bulk-import.test.mjs && node tests/app-settings.test.mjs && node tests/backup.test.mjs",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build --bundles nsis"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0"
+  }
+}
